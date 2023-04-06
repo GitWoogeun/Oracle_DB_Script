@@ -8,7 +8,7 @@ SELECT SUBSTR('저는 반드시 차세대 IT리더가 될꺼에요!', 8)  FROM D
 SELECT SUBSTR('저는 개발자에요', 4) FROM DUAL;
 -- 문자열 추출함수 SUBSTR( 문자열, 시작위치, 출력길이 )
 SELECT SUBSTR('ABCDEFG',3,4) FROM DUAL;                                       -- 3번째부터 4개의 문자만 출력 => CDEF
-SELECT SUBSTR('안녕하세요 저는 탁우근 입니다.', 7, 6) FROM DUAL;         -- 7번째부터 6개의 문자만 출력 => 저는 탁우근
+SELECT SUBSTR('안녕하세요 저는 개발자 입니다.', 7, 6) FROM DUAL;         -- 7번째부터 6개의 문자만 출력 => 저는 탁우근
 
 -- 모든 학생의 이름과 나이 몇십대 인지만을 조회하시오
 SELECT SUBSTR(NAME, 2,3) AS NAME , SUBSTR(AGE,1,1) AS AGE FROM MEMBER;
@@ -36,8 +36,7 @@ SELECT CONCAT('탁', '우근') FROM DUAL;
 -- │   문자열 합치기 기호 ||          │
 -- └──────────────┘
 -- 문자열 덧셈 연산자 
-SELECT '탁우근개발자는' || ' IT리더에요' FROM DUAL;
-SELECT ('탁우근개발자는' + 'IT리더에요') FROM DUAL;
+SELECT '저의 꿈은' || ' IT리더에요' FROM DUAL;
 
 -- ┌──────────────┐
 -- │ TRIM() : 양쪽의 빈공백을 제거 │
@@ -55,11 +54,11 @@ SELECT RTRIM('A    안녕안녕       ') AS TRIM_COLUMN FROM DUAL;
 -- ┌─────────────────┐
 -- │ LOWER : 모든 문자를 소문자로 변경 │
 -- └─────────────────┘
-SELECT LOWER('TAKWOOGEUN') FROM DUAL;
+SELECT LOWER('I am IT Reader') FROM DUAL;
 -- ┌─────────────────┐
 -- │  UPPER : 모든 문자를 대문자로 변경 │
 -- └─────────────────┘
-SELECT UPPER('takwoogeun') FROM DUAL;
+SELECT UPPER('I am IT Reader') FROM DUAL;
 -- 회원의 아이디가 takyou로 된 회원을 조회 ( 단 소/대문자 가리지 않음 )
 SELECT * FROM MEMBER WHERE UPPER(ID) = 'TAKYOU';
 -- ┌─────────────────────┐
