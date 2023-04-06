@@ -1,0 +1,36 @@
+-- 쿼리 연습을 위한 테이블 준비하기
+-- 쿼리를 위해 생성해야 할 테이블 구조
+
+CREATE TABLE NOTICE
+(
+    ID              NUMBER,
+    TITLE          NVARCHAR2(100),
+    WRITER_ID   NVARCHAR2(50),
+    CONTENT   CLOB,
+    REGDATE     TIMESTAMP,
+    HIT            NUMBER,
+    FILES          NVARCHAR2(1000)
+);
+
+CREATE TABLE "COMMENT"
+(
+    ID             NUMBER,
+    CONTENT  NVARCHAR2(2000),
+    REGDATE    TIMESTAMP,
+    WRITER_ID  NVARCHAR2(50),
+    NOTICE_ID  NUMBER
+);
+
+CREATE TABLE ROLE
+(
+    ID                  VARCHAR2(50),
+    DISCRIPTION    NVARCHAR2(500)
+);
+
+CREATE TABLE MEMBER_ROLE
+(
+    MEMBER_ID     NVARCHAR2(50),
+    ROLE_ID         VARCHAR2(50)
+);
+
+SELECT * FROM TAB;
