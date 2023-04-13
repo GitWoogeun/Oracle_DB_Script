@@ -13,7 +13,7 @@
 -- 테이블 생성 시 Entity 제약조건 PRIMARY KEY와 UNIQUE 첫번째 적용방법
 CREATE TABLE NOTICE
 (
-      ID              NUMBER             CONSTRAINT NOTICE_ID_PK PRIMARY KEY            -- 기본키 제약 조건
+      ID              NUMBER             CONSTRAINT NOTICE_ID_PK PRIMARY KEY            -- PRIMARY KEY 제약 조건 : NOTICE_ID_PK : 제약조건 이름
    ,  TITLE           VARCHAR2(300)   NOT NULL                                                        -- NOT NULL
    ,  WRITER_ID    VARCHAR2(50)     NOT NULL UNIQUE                                           -- NOT NULL / UNIQUE
    ,  "CONTENT"   VARCHAR2(4000)

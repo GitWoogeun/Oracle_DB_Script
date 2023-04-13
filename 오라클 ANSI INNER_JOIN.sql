@@ -21,7 +21,6 @@ SELECT *
   FROM MEMBER MEM, NOTICE NTC
 WHERE MEM.ID = NTC.WRITER_ID;
 
-
 -- ANSI INNER JOIN 방법. 
 -- 서로 관계가 없는(OUTER 레코드의) 데이터는 출력해주지 않는다
 SELECT * 

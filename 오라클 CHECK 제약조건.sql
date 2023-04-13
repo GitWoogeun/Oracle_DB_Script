@@ -2,6 +2,7 @@
 -- 테이블을 생성할 때 설정하는 방법
 
 -- 체크 제약조건( PHONE 데이터가 010으로 시작하면서 뒷 자릿수는 4자리 )
+-- 정규식을 사용ㅎ라지 않고 오로지 LIKE조건으로만 제약조건을 걸음
 CREATE TABLE TEST (
         ID          VARCHAR2(50)        NULL,
         PHONE   VARCHAR2(200)  CHECK(PHONE LIKE '010-%-____')  NOT NULL,

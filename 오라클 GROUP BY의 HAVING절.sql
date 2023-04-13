@@ -9,3 +9,16 @@ SELECT WRITER_ID, TITLE, HIT
 GROUP BY WRITER_ID, TITLE, HIT
 HAVING TITLE IS NOT NULL
      AND HIT < 2;     
+    
+    
+/*
+    "sales" table      : "id", "product_id", "sales_date", and "amount"
+    "products" table : "id", "name", and "category"
+*/ 
+     
+SELECT p.category, SUM(s.amount) as total_sales, 
+       MAX(s.amount) KEEP (DENSE_RANK FIRST ORDER BY s.amount DESC) as top_product_sales, 
+       MAX(p.name) KEEP (DENSE_RANK FIRST ORDER BY s.amount DESC) as top_product_name
+FROM sales s
+JOIN products p ON s.product_id = p.id
+GROUP BY p.category;
